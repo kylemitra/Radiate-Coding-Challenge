@@ -13,7 +13,7 @@ def generate_integers(amount: int):
         'num': str(amount),  # The number of integers requested
         'min': '0',  # For RGB image, we want between 0-255
         'max': '255',  # For RGB image, we want between 0-255
-        'col': '3',  # Want Standard 3 column output
+        'col': '3',  # Columns for Red, Green, Blue
         'base': '10',  # Want Base 10 Numbers
         'format': 'plain',  # Want plain text output
         'rnd': 'new'  # Standard randomized format
@@ -27,9 +27,6 @@ def generate_integers(amount: int):
         print(response.status_code + "Error")
     else:  # Return numbers if no error found
         return [int(num) for num in response.text.split()]
-
-
-
 
 
 def main():
