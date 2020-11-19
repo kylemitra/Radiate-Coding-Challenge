@@ -19,7 +19,17 @@ def generate_integers(amount: int):
         'rnd': 'new'  # Standard randomized format
         }
 
-    data = requests.get(GET_URL, params=my_params)
+    # Make GET Request using parameters above
+    response = requests.get(GET_URL, params=my_params)
+
+    # Check status code for potential errors
+    if response.status_code != 200:
+        print(response.status_code + "Error")
+    else:  # Return numbers if no error found
+        return [int(num) for num in response.text.split()]
+
+
+
 
 
 def main():
