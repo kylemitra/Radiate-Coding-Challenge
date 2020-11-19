@@ -1,4 +1,5 @@
 import requests
+from PIL import Image
 
 GET_URL = "https://www.random.org/integers/"  # Address to integer generator
 
@@ -29,7 +30,9 @@ def generate_integers(amount: int):
         return [int(num) for num in response.text.split()]
 
 
-
+def generate_image(pixel_list):
+    new_image = Image.new('RGB', (120, 120))
+    return
 
 
 def main():
