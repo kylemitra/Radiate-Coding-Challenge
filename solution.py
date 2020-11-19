@@ -16,7 +16,6 @@ def generate_integers(amount: int):
         'format': 'plain',  # Want plain text output
         'rnd': 'new'  # Standard randomized format
         }
-    print(my_params)
 
     # Make GET Request using parameters above
     response = requests.get(GET_URL, params=my_params)
@@ -53,8 +52,9 @@ def generate_image():
     np_pixel_array = np.array(pixel_list)  # Create numpy array of pixels
     np_pixel_array = np_pixel_array.reshape((120*120, 3))  # Resize numpy array
     new_image = Image.new('RGB', (120, 120))  # Creates new image
-    new_image.putdata(tuple(pixel) for pixel in np_pixel_array)  # Input pixels
+    new_image.putdata([tuple(pixel) for pixel in np_pixel_array])  # Input pixels
     new_image.save("my_RBG_image.png")  # Save image
+    print('Image successfully generated')  # Message to indicate success
 
 
 if __name__ == '__main__':
