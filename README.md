@@ -32,7 +32,9 @@ Next, run the solution script via the following command:
 
 This will produce a new RGB image on your local machine. It should resemble the image
 below which is the image I've generated for this challenge.  
-![Image of my RGB square](https://github.com/kylemitra/Radiate-Coding-Challenge/blob/main/my_RBG_image.png?raw=true)  
+<p align="center">
+  <img width="120" height="120" src="https://github.com/kylemitra/Radiate-Coding-Challenge/blob/main/my_RBG_image.png?raw=true">
+</p>
 
 ## Testing the solution
 I choose to utilize the Pytest package to run automated tests that verify the functions in my code.
